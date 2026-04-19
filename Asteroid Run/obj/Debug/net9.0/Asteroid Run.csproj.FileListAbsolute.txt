@@ -1,0 +1,33 @@
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Asteroid Run.exe
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Asteroid Run.deps.json
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Asteroid Run.runtimeconfig.json
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Asteroid Run.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Asteroid Run.pdb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\MonoGame.Framework.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\NVorbis.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\android-arm\native\libopenal.so
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\android-arm64\native\libopenal.so
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\android-x64\native\libopenal.so
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\android-x86\native\libopenal.so
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\ios-arm64\native\libopenal.a
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\iossimulator-arm64\native\libopenal.a
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\iossimulator-x64\native\libopenal.a
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\linux-arm64\native\libopenal.so
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\linux-x64\native\libopenal.so
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\osx\native\libopenal.dylib
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\win-x64\native\openal.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\mgcb.tool.restore
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.AssemblyInfo.cs
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid.D688CF85.Up2Date
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\refint\Asteroid Run.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.pdb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.genruntimeconfig.cache
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\ref\Asteroid Run.dll
