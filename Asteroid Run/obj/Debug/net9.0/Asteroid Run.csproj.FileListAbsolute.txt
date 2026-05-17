@@ -31,3 +31,22 @@ C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\refint\Asteroid
 C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.pdb
 C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.genruntimeconfig.cache
 C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\ref\Asteroid Run.dll
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\obj\Debug\net9.0\Asteroid Run.sourcelink.json
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Backgrounds\black.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Backgrounds\blue.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Backgrounds\darkPurple.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Backgrounds\purple.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\laserBlue01.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\playerShip1_orange.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_big1.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_big2.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_big3.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_big4.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_med1.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_med3.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_small1.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_small2.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_tiny1.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\meteorBrown_tiny2.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Fonts\LoreFont.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Backgrounds\intro_bg.xnb

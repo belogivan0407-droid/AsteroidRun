@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/black.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/blue.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/darkPurple.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/intro_bg.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/purple.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Fonts/LoreFont.spritefont</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/laserBlue01.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big1.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big2.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big3.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big4.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_med1.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_med3.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_small1.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_small2.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_tiny1.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_tiny2.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip1_orange.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
