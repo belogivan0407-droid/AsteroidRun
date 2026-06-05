@@ -9,15 +9,27 @@ namespace Asteroid_Run
     {
         public Vector2 Position;
         private Texture2D _texture;
+        private Texture2D _shieldTexture; 
         private float _speed = 400f;
 
         private float _shootTimer = 0f;
-        private const float ShootDelay = 0.2f; 
+        private const float ShootDelay = 0.2f;
 
-        public Player(Texture2D texture, Vector2 startPosition)
+        public int ShieldHP = 0;
+        public float SuperShotTimer = 0f;
+
+        public Rectangle Bounds => new Rectangle((int)Position.X, (int)Position.Y, _texture.Width, _texture.Height);
+
+        public Player(Texture2D texture, Texture2D shieldTexture, Vector2 startPosition)
         {
             _texture = texture;
+            _shieldTexture = shieldTexture;
             Position = startPosition;
+        }
+
+        public void SetTexture(Texture2D newTexture)
+        {
+            _texture = newTexture;
         }
 
         public void Update(GameTime gameTime, List<Projectile> projectiles)
@@ -32,6 +44,12 @@ namespace Asteroid_Run
 
             Position.X = MathHelper.Clamp(Position.X, 0, 800 - 32);
 
+            if (SuperShotTimer > 0)
+            {
+                SuperShotTimer -= deltaTime;
+                if (SuperShotTimer < 0) SuperShotTimer = 0;
+            }
+
             _shootTimer += deltaTime;
             if (keyboard.IsKeyDown(Keys.Space) && _shootTimer >= ShootDelay)
             {
@@ -42,20 +60,39 @@ namespace Asteroid_Run
 
         private void Shoot(List<Projectile> projectiles)
         {
-
             float laserWidth = 9f;
-
             Vector2 bulletPos = new Vector2(
                 Position.X + (_texture.Width / 2) - (laserWidth / 2),
                 Position.Y
             );
 
-            projectiles.Add(new Projectile(bulletPos, new Vector2(0, -700), false));
+            if (SuperShotTimer > 0)
+            {
+                projectiles.Add(new Projectile(bulletPos, new Vector2(0, -700), false));
+                projectiles.Add(new Projectile(bulletPos, new Vector2(-150, -700), false));
+                projectiles.Add(new Projectile(bulletPos, new Vector2(150, -700), false));
+            }
+            else
+            {
+                projectiles.Add(new Projectile(bulletPos, new Vector2(0, -700), false));
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, Position, Color.White);
+
+            if (ShieldHP > 0)
+            {
+                Vector2 shieldPos = new Vector2(
+                    Position.X + (_texture.Width / 2) - (_shieldTexture.Width / 2),
+                    Position.Y + (_texture.Height / 2) - (_shieldTexture.Height / 2)
+                );
+
+                float opacity = 0.4f + (ShieldHP * 0.2f);
+
+                spriteBatch.Draw(_shieldTexture, shieldPos, Color.Cyan * opacity);
+            }
         }
     }
 }

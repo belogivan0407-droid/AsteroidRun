@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Asteroid Run")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aed0163281b13f91b62d6b9803c755199f7bd26b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0de76a1bc27ce39ec5b8ffc542ec6746bfb0af70")]
 [assembly: System.Reflection.AssemblyProductAttribute("Asteroid Run")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Asteroid Run")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

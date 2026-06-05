@@ -8,7 +8,8 @@ namespace Asteroid_Run
         public Vector2 Position;
         public Vector2 Velocity;
         public bool IsEnemy; 
-        public Rectangle Bounds => new Rectangle((int)Position.X, (int)Position.Y, 9, 37);
+
+        public Rectangle Bounds => new Rectangle((int)Position.X, (int)Position.Y, 9, 33);
 
         public Projectile(Vector2 position, Vector2 velocity, bool isEnemy)
         {
@@ -19,8 +20,7 @@ namespace Asteroid_Run
 
         public void Update(GameTime gameTime)
         {
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            Position += Velocity * deltaTime;
+            Position += Velocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
 
         public void Draw(SpriteBatch spriteBatch, Texture2D texture)

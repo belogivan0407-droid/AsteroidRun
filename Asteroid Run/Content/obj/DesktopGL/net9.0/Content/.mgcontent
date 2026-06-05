@@ -10,7 +10,9 @@
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/intro_bg.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/purple.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Fonts/LoreFont.spritefont</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/music/Sector_Seven_Ascent.mp3</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/laserBlue01.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/laserRed01.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big1.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big2.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big3.png</File>
@@ -21,9 +23,45 @@
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_small2.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_tiny1.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_tiny2.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/phantom.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip1_blue.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip1_green.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip1_orange.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip1_red.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip2_blue.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip2_green.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip2_orange.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip2_red.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip3_blue.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip3_green.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip3_orange.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip3_red.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/powerupRed_bolt.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/powerupRed_shield.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/powerupRed_star.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/shield3.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/ufo.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>Music/Sector_Seven_Ascent</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

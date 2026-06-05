@@ -1,3 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/intro_bg.png","C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/bin/DesktopGL/Backgrounds/intro_bg.xnb","TextureProcessor","Texture2DContent",8723829,17301589,0,4080289
-"C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Fonts/LoreFont.spritefont","C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/bin/DesktopGL/Fonts/LoreFont.xnb","FontDescriptionProcessor","SpriteFontContent",2167,41685,0,055487
+"C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/music/Sector_Seven_Ascent.mp3","C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/bin/DesktopGL/Music/Sector_Seven_Ascent.xnb","SongProcessor","SongContent",3795295,137,2,928766
