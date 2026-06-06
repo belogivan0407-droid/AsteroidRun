@@ -86,11 +86,59 @@
 /processorParam:Quality=Best
 /build:music/Sector_Seven_Ascent.mp3;Music/Sector_Seven_Ascent
 
-#begin music/Sector_Seven_Ascent.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
+#begin Sounds/sfx_laser1.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:music/Sector_Seven_Ascent.mp3;Music/Sector_Seven_Ascent
+/build:Sounds/sfx_laser1.ogg
+
+#begin Sounds/sfx_laser2.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/sfx_laser2.ogg
+
+#begin Sounds/sfx_lose.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/sfx_lose.ogg
+
+#begin Sounds/sfx_shieldDown.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/sfx_shieldDown.ogg
+
+#begin Sounds/sfx_shieldUp.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/sfx_shieldUp.ogg
+
+#begin Sounds/sfx_twoTone.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/sfx_twoTone.ogg
+
+#begin Sounds/sfx_zap.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/sfx_zap.ogg
+
+#begin Sprites/cursor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/cursor.png
 
 #begin Sprites/laserBlue01.png
 /importer:TextureImporter
@@ -259,6 +307,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/playerShip1_blue.png
+
+#begin Sprites/playerShip1_damage3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/playerShip1_damage3.png
 
 #begin Sprites/playerShip1_green.png
 /importer:TextureImporter

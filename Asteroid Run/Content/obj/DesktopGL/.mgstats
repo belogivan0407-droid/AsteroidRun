@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/music/Sector_Seven_Ascent.mp3","C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/bin/DesktopGL/Music/Sector_Seven_Ascent.xnb","SongProcessor","SongContent",3795295,137,2,928766
+"C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip1_damage3.png","C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/bin/DesktopGL/Sprites/playerShip1_damage3.xnb","TextureProcessor","Texture2DContent",1686,30485,0,099019

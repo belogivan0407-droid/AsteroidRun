@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media; 
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 using System.Collections.Generic;
 using System;
 
@@ -24,11 +25,14 @@ namespace Asteroid_Run
         private BackgroundManager _backgroundManager;
 
         private Texture2D _bgBlack, _bgIntro, _bgBlue, _bgDarkPurple, _bgPurple;
+        private Texture2D _cursorTexture;
 
         private Player _player;
         private List<Texture2D> _shipTextures = new List<Texture2D>();
         private int _currentShipIndex = 2;
         private Texture2D _playerShieldTexture;
+
+        private Texture2D _brokenShipTexture;
 
         private List<Projectile> _projectiles = new List<Projectile>();
         private Texture2D _bulletTexture;
@@ -44,15 +48,10 @@ namespace Asteroid_Run
         private Texture2D _phantomTexture;
 
         private List<PowerUp> _powerups = new List<PowerUp>();
-        private Texture2D _powerupShieldTex;
-        private Texture2D _powerupBoltTex;
-        private Texture2D _powerupStarTex;
+        private Texture2D _powerupShieldTex, _powerupBoltTex, _powerupStarTex;
         private float _slowdownTimer = 0f;
 
-        private float _meteorTimer = 0f;
-        private float _ufoTimer = 0f;
-        private float _phantomTimer = 0f;
-
+        private float _meteorTimer = 0f, _ufoTimer = 0f, _phantomTimer = 0f;
         private Random _random = new Random();
         private float _textTimer = 0f;
         private bool _showPressEnter = true;
@@ -65,12 +64,16 @@ namespace Asteroid_Run
         private SaveData _saveData;
 
         private Song _backgroundMusic;
+        private SoundEffect _sfxLaser1, _sfxLaser2, _sfxLose;
+        private SoundEffect _sfxShieldUp, _sfxShieldDown, _sfxZap, _sfxTwoTone;
+
+        private ParticleManager _particleManager;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            IsMouseVisible = false;
             _graphics.PreferredBackBufferWidth = 800;
             _graphics.PreferredBackBufferHeight = 600;
         }
@@ -92,6 +95,9 @@ namespace Asteroid_Run
             _bgPurple = Content.Load<Texture2D>("Backgrounds/purple");
             _bgIntro = Content.Load<Texture2D>("Backgrounds/intro_bg");
 
+            _cursorTexture = Content.Load<Texture2D>("Sprites/cursor");
+            _brokenShipTexture = Content.Load<Texture2D>("Sprites/playerShip1_damage3"); // Загружаем обломки
+
             _shipTextures.Add(Content.Load<Texture2D>("Sprites/playerShip1_blue"));
             _shipTextures.Add(Content.Load<Texture2D>("Sprites/playerShip1_green"));
             _shipTextures.Add(Content.Load<Texture2D>("Sprites/playerShip1_orange"));
@@ -103,14 +109,27 @@ namespace Asteroid_Run
             _shipTextures.Add(Content.Load<Texture2D>("Sprites/playerShip3_blue"));
             _shipTextures.Add(Content.Load<Texture2D>("Sprites/playerShip3_green"));
 
-            _backgroundManager = new BackgroundManager(_bgBlack, 120f);
+            _backgroundManager = new BackgroundManager(_bgBlack, 120f, GraphicsDevice);
             _uiManager = new UIManager(_loreFont, _bgBlack, _shipTextures);
 
             _playerShieldTexture = Content.Load<Texture2D>("Sprites/shield3");
 
-            Vector2 startPos = new Vector2(400 - (_shipTextures[_currentShipIndex].Width / 2), 520);
+            _backgroundMusic = Content.Load<Song>("music/Sector_Seven_Ascent");
+            _sfxLaser1 = Content.Load<SoundEffect>("Sounds/sfx_laser1");
+            _sfxLaser2 = Content.Load<SoundEffect>("Sounds/sfx_laser2");
+            _sfxLose = Content.Load<SoundEffect>("Sounds/sfx_lose");
+            _sfxShieldUp = Content.Load<SoundEffect>("Sounds/sfx_shieldUp");
+            _sfxShieldDown = Content.Load<SoundEffect>("Sounds/sfx_shieldDown");
+            _sfxZap = Content.Load<SoundEffect>("Sounds/sfx_zap");
+            _sfxTwoTone = Content.Load<SoundEffect>("Sounds/sfx_twoTone");
 
-            _player = new Player(_shipTextures[_currentShipIndex], _playerShieldTexture, startPos);
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Volume = 0.5f;
+
+            _particleManager = new ParticleManager(GraphicsDevice);
+
+            Vector2 startPos = new Vector2(400 - (_shipTextures[_currentShipIndex].Width / 2), 520);
+            _player = new Player(_shipTextures[_currentShipIndex], _playerShieldTexture, startPos, _sfxLaser1);
 
             _bulletTexture = Content.Load<Texture2D>("Sprites/laserBlue01");
             _enemyBulletTexture = Content.Load<Texture2D>("Sprites/laserRed01");
@@ -125,11 +144,6 @@ namespace Asteroid_Run
             _meteorTextures.Add(Content.Load<Texture2D>("Sprites/meteorBrown_med1"));
             _meteorTextures.Add(Content.Load<Texture2D>("Sprites/meteorBrown_small1"));
             _meteorTextures.Add(Content.Load<Texture2D>("Sprites/meteorBrown_tiny1"));
-
-            _backgroundMusic = Content.Load<Song>("music/Sector_Seven_Ascent");
-            MediaPlayer.IsRepeating = true; 
-            MediaPlayer.Volume = 0.5f;      
-            MediaPlayer.Play(_backgroundMusic);
         }
 
         private void ResetGame()
@@ -139,20 +153,16 @@ namespace Asteroid_Run
             _phantoms.Clear();
             _projectiles.Clear();
             _powerups.Clear();
+            _particleManager.Clear();
 
-            _meteorTimer = 0f;
-            _ufoTimer = 0f;
-            _phantomTimer = 0f;
-            _slowdownTimer = 0f;
+            _meteorTimer = 0f; _ufoTimer = 0f; _phantomTimer = 0f; _slowdownTimer = 0f;
 
             _player.Position = new Vector2(400 - (_shipTextures[_currentShipIndex].Width / 2), 520);
             _player.ShieldHP = 0;
             _player.SuperShotTimer = 0f;
+            _player.InvincibleTimer = 0f;
 
-            _score = 0;
-            _distance = 0f;
-
-            _currentZone = 1;
+            _score = 0; _distance = 0f; _currentZone = 1;
             _backgroundManager.ResetTexture(_bgBlack);
         }
 
@@ -200,7 +210,7 @@ namespace Asteroid_Run
                     break;
                 case GameState.GameOver:
                     int clickedOver = _uiManager.UpdateGameOver();
-                    if (clickedOver == 0) { ResetGame(); _currentState = GameState.Playing; }
+                    if (clickedOver == 0) { ResetGame(); _currentState = GameState.Playing; MediaPlayer.Play(_backgroundMusic); }
                     else if (clickedOver == 1) { ResetGame(); _currentState = GameState.MainMenu; }
                     break;
             }
@@ -214,7 +224,7 @@ namespace Asteroid_Run
         {
             _textTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (_textTimer >= 0.5f) { _showPressEnter = !_showPressEnter; _textTimer = 0f; }
-            if (Keyboard.GetState().IsKeyDown(Keys.Enter)) _currentState = GameState.Playing;
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter)) { _currentState = GameState.Playing; MediaPlayer.Play(_backgroundMusic); }
         }
 
         private void UpdateGameplay(GameTime gameTime, float deltaTime)
@@ -231,6 +241,8 @@ namespace Asteroid_Run
             GameTime enemyTime = new GameTime(gameTime.TotalGameTime, TimeSpan.FromSeconds(deltaTime * currentEnemySpeedMult));
             _backgroundManager.SetSpeed(120f * difficultyMultiplier * currentEnemySpeedMult);
             _backgroundManager.Update(gameTime);
+
+            _particleManager.Update(deltaTime);
 
             _distance += (5f * difficultyMultiplier) * deltaTime;
 
@@ -262,7 +274,7 @@ namespace Asteroid_Run
             if (_phantomTimer > 12f && _currentZone >= 3)
             {
                 Vector2 pos = new Vector2(_random.Next(100, 700), -100);
-                _phantoms.Add(new Phantom(_phantomTexture, pos, 100f * difficultyMultiplier));
+                _phantoms.Add(new Phantom(_phantomTexture, pos, 100f * difficultyMultiplier, _sfxLaser2));
                 _phantomTimer = 0;
             }
 
@@ -295,20 +307,16 @@ namespace Asteroid_Run
             for (int i = 0; i < _powerups.Count; i++)
             {
                 _powerups[i].Update(deltaTime);
-
                 if (_player.Bounds.Intersects(_powerups[i].Bounds))
                 {
                     switch (_powerups[i].Type)
                     {
-                        case PowerUpType.Shield: _player.ShieldHP = 3; break;
-                        case PowerUpType.SuperShot: _player.SuperShotTimer = 5f; break;
-                        case PowerUpType.Slowdown: _slowdownTimer = 5f; break;
+                        case PowerUpType.Shield: _player.ShieldHP = 3; _sfxShieldUp.Play(); break;
+                        case PowerUpType.SuperShot: _player.SuperShotTimer = 5f; _sfxZap.Play(); break;
+                        case PowerUpType.Slowdown: _slowdownTimer = 5f; _sfxTwoTone.Play(); break;
                     }
-                    _powerups.RemoveAt(i);
-                    i--;
-                    continue;
+                    _powerups.RemoveAt(i); i--; continue;
                 }
-
                 if (_powerups[i].Position.Y > 650) { _powerups.RemoveAt(i); i--; }
             }
 
@@ -323,9 +331,8 @@ namespace Asteroid_Run
                     {
                         int mw = _meteors[j].Bounds.Width;
                         if (mw > 80) _score += 10; else if (mw > 40) _score += 25; else _score += 50;
-                        _meteors.RemoveAt(j);
-                        bulletDestroyed = true;
-                        break;
+                        _particleManager.CreateExplosion(_meteors[j].Position + new Vector2(mw / 2, mw / 2), 15);
+                        _meteors.RemoveAt(j); bulletDestroyed = true; break;
                     }
                 }
 
@@ -336,18 +343,14 @@ namespace Asteroid_Run
                         if (_projectiles[i].Bounds.Intersects(_ufos[j].Bounds))
                         {
                             _score += 150;
-
                             if (_random.Next(100) < 50)
                             {
                                 PowerUpType type = (PowerUpType)_random.Next(3);
-                                Texture2D tex = type == PowerUpType.Shield ? _powerupShieldTex :
-                                                type == PowerUpType.Slowdown ? _powerupBoltTex : _powerupStarTex;
+                                Texture2D tex = type == PowerUpType.Shield ? _powerupShieldTex : (type == PowerUpType.Slowdown ? _powerupBoltTex : _powerupStarTex);
                                 _powerups.Add(new PowerUp(tex, _ufos[j].Position, type));
                             }
-
-                            _ufos.RemoveAt(j);
-                            bulletDestroyed = true;
-                            break;
+                            _particleManager.CreateExplosion(_ufos[j].Position + new Vector2(30, 30), 25);
+                            _ufos.RemoveAt(j); bulletDestroyed = true; break;
                         }
                     }
                 }
@@ -359,9 +362,8 @@ namespace Asteroid_Run
                         if (_projectiles[i].Bounds.Intersects(_phantoms[j].Bounds))
                         {
                             _score += 300;
-                            _phantoms.RemoveAt(j);
-                            bulletDestroyed = true;
-                            break;
+                            _particleManager.CreateExplosion(_phantoms[j].Position + new Vector2(35, 35), 40);
+                            _phantoms.RemoveAt(j); bulletDestroyed = true; break;
                         }
                     }
                 }
@@ -371,11 +373,17 @@ namespace Asteroid_Run
 
             bool TakeDamage()
             {
+                if (_player.InvincibleTimer > 0) return false;
+
                 if (_player.ShieldHP > 0)
                 {
                     _player.ShieldHP--;
+                    _sfxShieldDown.Play();
+                    _player.InvincibleTimer = 0.8f;
                     return false;
                 }
+
+                _particleManager.CreateExplosion(_player.Position + new Vector2(_player.Bounds.Width / 2, _player.Bounds.Height / 2), 100);
                 return true;
             }
 
@@ -383,8 +391,9 @@ namespace Asteroid_Run
             {
                 if (_player.Bounds.Intersects(_meteors[i].Bounds))
                 {
-                    if (TakeDamage()) _currentState = GameState.GameOver;
-                    _meteors.RemoveAt(i); i--;
+                    bool hitRegistered = _player.InvincibleTimer <= 0;
+                    if (TakeDamage()) { _currentState = GameState.GameOver; }
+                    if (hitRegistered) { _meteors.RemoveAt(i); i--; }
                     if (_currentState == GameState.GameOver) break;
                 }
             }
@@ -394,8 +403,9 @@ namespace Asteroid_Run
                 {
                     if (_player.Bounds.Intersects(_ufos[i].Bounds))
                     {
-                        if (TakeDamage()) _currentState = GameState.GameOver;
-                        _ufos.RemoveAt(i); i--;
+                        bool hitRegistered = _player.InvincibleTimer <= 0;
+                        if (TakeDamage()) { _currentState = GameState.GameOver; }
+                        if (hitRegistered) { _ufos.RemoveAt(i); i--; }
                         if (_currentState == GameState.GameOver) break;
                     }
                 }
@@ -406,8 +416,9 @@ namespace Asteroid_Run
                 {
                     if (_player.Bounds.Intersects(_phantoms[i].Bounds))
                     {
-                        if (TakeDamage()) _currentState = GameState.GameOver;
-                        _phantoms.RemoveAt(i); i--;
+                        bool hitRegistered = _player.InvincibleTimer <= 0;
+                        if (TakeDamage()) { _currentState = GameState.GameOver; }
+                        if (hitRegistered) { _phantoms.RemoveAt(i); i--; }
                         if (_currentState == GameState.GameOver) break;
                     }
                 }
@@ -418,8 +429,9 @@ namespace Asteroid_Run
                 {
                     if (_projectiles[i].IsEnemy && _player.Bounds.Intersects(_projectiles[i].Bounds))
                     {
-                        if (TakeDamage()) _currentState = GameState.GameOver;
-                        _projectiles.RemoveAt(i); i--;
+                        bool hitRegistered = _player.InvincibleTimer <= 0;
+                        if (TakeDamage()) { _currentState = GameState.GameOver; }
+                        if (hitRegistered) { _projectiles.RemoveAt(i); i--; }
                         if (_currentState == GameState.GameOver) break;
                     }
                 }
@@ -427,6 +439,7 @@ namespace Asteroid_Run
 
             if (_currentState == GameState.GameOver)
             {
+                MediaPlayer.Stop(); _sfxLose.Play();
                 bool isNewRecord = false;
                 if (_score > _saveData.HighScore) { _saveData.HighScore = _score; isNewRecord = true; }
                 if ((int)_distance > _saveData.HighDistance) { _saveData.HighDistance = (int)_distance; isNewRecord = true; }
@@ -441,28 +454,20 @@ namespace Asteroid_Run
 
             switch (_currentState)
             {
-                case GameState.MainMenu:
-                    _uiManager.DrawMainMenu(_spriteBatch, _saveData.HighScore, _saveData.HighDistance);
-                    break;
-                case GameState.ShipSelection:
-                    _uiManager.DrawShipSelection(_spriteBatch, _currentShipIndex);
-                    break;
-                case GameState.Instructions:
-                    _uiManager.DrawInstructions(_spriteBatch);
-                    break;
-                case GameState.Intro:
-                    DrawIntro();
-                    break;
-                case GameState.Playing:
-                    _backgroundManager.Draw(_spriteBatch);
-                    DrawGameplay();
-                    break;
-                case GameState.GameOver:
-                    _backgroundManager.Draw(_spriteBatch);
-                    DrawGameplay();
-                    _uiManager.DrawGameOver(_spriteBatch, _score, (int)_distance);
-                    break;
+                case GameState.MainMenu: _uiManager.DrawMainMenu(_spriteBatch, _saveData.HighScore, _saveData.HighDistance); break;
+                case GameState.ShipSelection: _uiManager.DrawShipSelection(_spriteBatch, _currentShipIndex); break;
+                case GameState.Instructions: _uiManager.DrawInstructions(_spriteBatch); break;
+                case GameState.Intro: DrawIntro(); break;
+                case GameState.Playing: _backgroundManager.Draw(_spriteBatch); DrawGameplay(gameTime); break;
+                case GameState.GameOver: _backgroundManager.Draw(_spriteBatch); DrawGameplay(gameTime); _uiManager.DrawGameOver(_spriteBatch, _score, (int)_distance); break;
             }
+
+            if (_currentState == GameState.MainMenu || _currentState == GameState.ShipSelection || _currentState == GameState.Instructions || _currentState == GameState.GameOver)
+            {
+                MouseState mouseState = Mouse.GetState();
+                _spriteBatch.Draw(_cursorTexture, new Vector2(mouseState.X, mouseState.Y), Color.White);
+            }
+
             _spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -474,7 +479,7 @@ namespace Asteroid_Run
                 _spriteBatch.DrawString(_loreFont, "НАЖМИТЕ [ENTER] ДЛЯ НАЧАЛА МИССИИ", new Vector2(170, 540), Color.Yellow);
         }
 
-        private void DrawGameplay()
+        private void DrawGameplay(GameTime gameTime)
         {
             foreach (var meteor in _meteors) meteor.Draw(_spriteBatch);
             foreach (var ufo in _ufos) ufo.Draw(_spriteBatch);
@@ -487,7 +492,10 @@ namespace Asteroid_Run
                 bullet.Draw(_spriteBatch, tex);
             }
 
-            _player.Draw(_spriteBatch);
+            _particleManager.Draw(_spriteBatch);
+
+            bool isDead = _currentState == GameState.GameOver;
+            _player.Draw(_spriteBatch, gameTime, isDead, _brokenShipTexture);
 
             string scoreText = $"ОЧКИ: {_score}";
             string distanceText = $"ПРОГРЕСС: {(int)_distance} ПАРСЕК";
@@ -503,13 +511,11 @@ namespace Asteroid_Run
             int yOffset = 112;
             if (_player.ShieldHP > 0)
             {
-                _spriteBatch.DrawString(_loreFont, $"ЩИТ: {_player.ShieldHP}", new Vector2(20, yOffset), Color.DeepSkyBlue);
-                yOffset += 30;
+                _spriteBatch.DrawString(_loreFont, $"ЩИТ: {_player.ShieldHP}", new Vector2(20, yOffset), Color.DeepSkyBlue); yOffset += 30;
             }
             if (_player.SuperShotTimer > 0)
             {
-                _spriteBatch.DrawString(_loreFont, $"СУПЕР: {(int)_player.SuperShotTimer + 1} СЕК", new Vector2(20, yOffset), Color.Gold);
-                yOffset += 30;
+                _spriteBatch.DrawString(_loreFont, $"СУПЕР: {(int)_player.SuperShotTimer + 1} СЕК", new Vector2(20, yOffset), Color.Gold); yOffset += 30;
             }
             if (_slowdownTimer > 0)
             {

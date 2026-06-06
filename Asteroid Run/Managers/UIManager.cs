@@ -160,10 +160,8 @@ namespace Asteroid_Run
         {
             spriteBatch.Draw(_bgTexture, new Rectangle(0, 0, 800, 600), Color.White);
 
-            // Чуть подняли заголовок, чтобы вместить рекорды
             DrawCenteredText(spriteBatch, "ASTEROID RUN: СЕКТОР ЗЕРО", 100, Color.Cyan);
 
-            // Отрисовка рекордов желтым цветом
             DrawCenteredText(spriteBatch, $"РЕКОРД: {highScore} ОЧКОВ  |  {highDistance} ПАРСЕК", 160, Color.Yellow);
 
             DrawButtonList(spriteBatch, _mainMenuButtons);
