@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/playerShip1_damage3.png","C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/bin/DesktopGL/Sprites/playerShip1_damage3.xnb","TextureProcessor","Texture2DContent",1686,30485,0,099019
+"C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/music/Glass_Horizon.mp3","C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/bin/DesktopGL/Music/Glass_Horizon.xnb","SongProcessor","SongContent",3422892,131,2,6729124

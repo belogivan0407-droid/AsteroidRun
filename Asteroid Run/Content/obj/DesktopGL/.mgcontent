@@ -10,6 +10,7 @@
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/intro_bg.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Backgrounds/purple.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Fonts/LoreFont.spritefont</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/music/Glass_Horizon.mp3</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/music/Sector_Seven_Ascent.mp3</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sounds/sfx_laser1.ogg</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sounds/sfx_laser2.ogg</File>
@@ -19,6 +20,9 @@
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sounds/sfx_twoTone.ogg</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sounds/sfx_zap.ogg</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/cursor.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/enemyBlack5.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/enemyGreen3.png</File>
+    <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/enemyRed4.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/laserBlue01.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/laserRed01.png</File>
     <File>C:/Users/user/Desktop/Asteroid Run/Asteroid Run/Content/Sprites/meteorBrown_big1.png</File>
@@ -58,7 +62,11 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File>Music/Glass_Horizon</File>
     <File>Music/Sector_Seven_Ascent</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

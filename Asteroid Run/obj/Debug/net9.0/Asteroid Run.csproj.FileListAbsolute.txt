@@ -86,3 +86,8 @@ C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sounds\
 C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sounds\sfx_zap.ogg
 C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sounds\sfx_zap.xnb
 C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\playerShip1_damage3.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\enemyBlack5.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\enemyGreen3.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Sprites\enemyRed4.xnb
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Music\Glass_Horizon.ogg
+C:\Users\user\Desktop\Asteroid Run\Asteroid Run\bin\Debug\net9.0\Content\Music\Glass_Horizon.xnb

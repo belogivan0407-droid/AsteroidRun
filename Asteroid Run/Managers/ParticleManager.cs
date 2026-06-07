@@ -49,6 +49,24 @@ namespace Asteroid_Run
             }
         }
 
+        public void CreateEngineTrail(Vector2 position)
+        {
+            float angle = (float)(Math.PI / 2) + (float)(_random.NextDouble() * 0.4 - 0.2);
+            float speed = _random.Next(150, 250);
+
+            Color color = Color.DeepSkyBlue;
+            if (_random.Next(2) == 0) color = Color.Cyan;
+
+            _particles.Add(new Particle
+            {
+                Position = position,
+                Velocity = new Vector2((float)Math.Cos(angle) * speed, (float)Math.Sin(angle) * speed),
+                Color = color,
+                Lifespan = 0f,
+                MaxLifespan = (float)(0.1f + _random.NextDouble() * 0.2f) 
+            });
+        }
+
         public void Update(float deltaTime)
         {
             for (int i = 0; i < _particles.Count; i++)
@@ -73,7 +91,6 @@ namespace Asteroid_Run
             {
                 float progress = p.Lifespan / p.MaxLifespan;
                 float alpha = 1f - progress;
-
                 spriteBatch.Draw(_pixelTexture, new Rectangle((int)p.Position.X, (int)p.Position.Y, 3, 3), p.Color * alpha);
             }
         }

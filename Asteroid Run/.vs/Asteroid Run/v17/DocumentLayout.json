@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\managers\\particlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:managers\\particlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\managers\\backgroundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:managers\\backgroundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\entities\\phantom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:entities\\phantom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\entities\\phantom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:entities\\phantom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\managers\\backgroundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:managers\\backgroundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\managers\\particlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:managers\\particlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|c:\\users\\user\\desktop\\asteroid run\\asteroid run\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB9DE22-44F3-4A68-88E4-E93C47D5391F}|Asteroid Run.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,63 +34,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAP8BAAAAAAAAAAAcwO8BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKUBAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T22:30:31.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Managers\\UIManager.cs",
               "RelativeDocumentMoniker": "Managers\\UIManager.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Managers\\UIManager.cs",
               "RelativeToolTip": "Managers\\UIManager.cs",
-              "ViewState": "AgIAANYAAAAAAAAAAAAQwKMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T22:30:19.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ParticleManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Managers\\ParticleManager.cs",
               "RelativeDocumentMoniker": "Managers\\ParticleManager.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Managers\\ParticleManager.cs",
               "RelativeToolTip": "Managers\\ParticleManager.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAkwEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T22:29:48.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "BackgroundManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Managers\\BackgroundManager.cs",
               "RelativeDocumentMoniker": "Managers\\BackgroundManager.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Managers\\BackgroundManager.cs",
               "RelativeToolTip": "Managers\\BackgroundManager.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAowF0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T22:29:09.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Entities\\Player.cs",
               "RelativeDocumentMoniker": "Entities\\Player.cs",
@@ -103,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Phantom.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Entities\\Phantom.cs",
               "RelativeDocumentMoniker": "Entities\\Phantom.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Asteroid Run\\Asteroid Run\\Entities\\Phantom.cs",
               "RelativeToolTip": "Entities\\Phantom.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T22:28:30.013Z",
               "EditorCaption": ""
